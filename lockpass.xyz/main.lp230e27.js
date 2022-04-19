@@ -3105,7 +3105,7 @@ function random(seed) {
                                 ) {
                                     var o = document.createElement("div");
                                     o.classList.add("no-data"),
-                                        (o.innerText = "No Data"),
+                                        (o.innerText = "Sem estatisticas!"),
                                         s.appendChild(o);
                                 } else
                                     for (
