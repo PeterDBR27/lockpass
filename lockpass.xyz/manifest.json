@@ -3,24 +3,39 @@
   "name": "LockPass",
   "icons": [
     {
-      "src": "/images/lockpass_logo_256x256.png",
+      "src": "/img/lockpass_logo_256x256.png",
       "type": "image/png",
       "sizes": "256x256"
     },
     {
-      "src": "/images/lockpass_logo_384x384.png",
+      "src": "/img/lockpass_logo_384x384.png",
       "type": "image/png",
       "sizes": "384x384"
     },
     {
-      "src": "/images/lockpass_logo_192x192.png",
+      "src": "/img/lockpass_logo_192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/lockpass_logo_512x512.png",
+      "src": "/img/lockpass_logo_512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "/img/lockpass_og_1200x630.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/LockPassIcon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/LogoLockPass.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "start_url": "https://www.lockpass.xyz",
