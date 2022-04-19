@@ -1428,7 +1428,8 @@ function random(seed) {
               </section>
             </div>
             <div id="footnote">
-              <div id="copyright">Feito por <a href="https://www.instagram.com/_xd_pedro" target="blank" title="@_xd_pedro">Pedro Henrique</a></strong></div>
+              <div id="copyright">Site feito por <a href="https://www.instagram.com/_xd_pedro" target="blank" title="@_xd_pedro">Pedro Henrique</a></strong></div>
+              <div id="copyrightr">Logo feita por <a href="https://www.instagram.com/llele.kkkj" target="blank" title="@llele.kkkj">Eleonora</a></strong></div>
               <div>
                 <div id="puzzle-number"></div>
                 <div id="hash"></div>
@@ -1714,7 +1715,7 @@ function random(seed) {
                 .concat(1e3, ";\n  }\n  #system-toaster {\n    z-index: ")
                 .concat(
                     4e3,
-                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-1);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(6, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="help">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n         LOCKPASS\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="statistics">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="settings">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
+                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-1);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(6, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="help">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n <img src="lockpass.xyz/img/LogoLockPass.png" alt="LOCKPASS" draggable="false">\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="statistics">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="settings">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
                 );
         var Qa = document.createElement("template");
         Qa.innerHTML =
@@ -2226,7 +2227,7 @@ function random(seed) {
                                                         ),
                                                     t =
                                                         document.createTextNode(
-                                                            "Settings"
+                                                            "Configurações"
                                                         );
                                                 s.appendChild(t);
                                                 var o =
@@ -2253,7 +2254,7 @@ function random(seed) {
                                                         ),
                                                     t =
                                                         document.createTextNode(
-                                                            "How to play"
+                                                            "Como jogar"
                                                         );
                                                 s.appendChild(t);
                                                 var o =
@@ -2521,7 +2522,7 @@ function random(seed) {
                                                     }
                                                     "↵" == e &&
                                                         ((a.textContent =
-                                                            "enter"),
+                                                            "ENVIAR"),
                                                         a.classList.add(
                                                             "one-and-a-half"
                                                         ));
@@ -3484,12 +3485,12 @@ function random(seed) {
             </style>
             <section>
               <div class="instructions">
-                <p>Descubra o <strong>NÚMERO</strong> em 6 tentativas.</p>
-                <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
+                <p>Descubra o <strong>CÓDIGO</strong> em 6 tentativas.</p>
                 <p>Cada tentativa deve ser um número de 5 dígitos. Aperte o botão <strong>ENVIAR</strong> para enviar.</p>
                 <p>Após enviar, os números mudarão para indicar o quão perto você está da resposta.</p>
+                <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
                 <div class="examples">
-                <p>Se um número ficar verde, ele está presenta no código e na posição correta.</p>
+                <p>Se um número ficar <strong>VERDE</strong>, ele está presenta no código e na posição correta.</p>
                   <div class="example">
                     <div class="row">
                       <game-tile letter="3" evaluation="correct" reveal></game-tile>
@@ -3498,7 +3499,7 @@ function random(seed) {
                       <game-tile letter="2"></game-tile>
                       <game-tile letter="0"></game-tile>
                     </div>
-                    <p>Se um número ficar amarelo, ele está presente no código, mas na posição errada.</p>
+                    <p>Se um número ficar <strong>AMARELO</strong>, ele está presente no código, mas na posição errada.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3508,7 +3509,7 @@ function random(seed) {
                       <game-tile letter="3"></game-tile>
                       <game-tile letter="7"></game-tile>
                     </div>
-                    <p>Se um número ficar cinza, ele <strong>NÃO</strong> está no código.</p>
+                    <p>Se um número ficar <strong>CINZA</strong>, ele <strong>NÃO</strong> está no código.</p>
                   </div>
                   <div class="example">
                     <div class="row">
