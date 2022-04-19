@@ -1724,12 +1724,12 @@ function random(seed) {
             es = "WIN",
             as = "FAIL",
             ss = [
-                "Genial",
-                "Magnifico",
-                "Impressionante",
-                "Explendido",
-                "Boa",
-                "Ufa",
+                "Genial!",
+                "Magnifico!",
+                "Impressionante!",
+                "Explendido!",
+                "Boa!",
+                "Ufa!",
             ],
             ts = (function (e) {
                 r(t, e);
