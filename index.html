@@ -8,10 +8,9 @@
     <meta name="keywords" content="lockpass, lock pass, pass lock, termo, letreco, numberle, LOCKPASS, LOCK PASS, PASS LOCK, TERMO">
 	  <meta name="author" content="Pedro Henrique">
     <title>LockPass - Um jogo diario de números</title>
+    <meta name="application-name" content="LockPass - Um jogo diario de números" />
+    <meta name="apple-mobile-web-app-title" content="LockPass - Um jogo diario de números" />
     <meta name="description" content="Descubra o código em 6 tentativas. Um novo código está disponível todos os dias!">
-
-    <!-- WebCounter -->
-    <div id="sfcx86rhd2g3m3udap87p8pft1zkaa5zjmt"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=x86rhd2g3m3udap87p8pft1zkaa5zjmt&down=async" async></script><br><a href="https://www.webcontadores.com"></a><noscript><img src="https://counter9.stat.ovh/private/webcontadores.php?c=x86rhd2g3m3udap87p8pft1zkaa5zjmt" border="0"></a></noscript>
 
     <!-- FB Meta Tags -->
     <meta property="og:url" content="https://www.lockpass.xyz">
@@ -29,13 +28,29 @@
     <link href="lockpass.xyz/img/LockPassIcon.png" rel="icon shortcut" sizes="192192" />
     <link href="lockpass.xyz/img/LockPassIcon.png" rel="apple-touch-icon" />
 
+    <!-- WebCounter -->
+    <div id="sfcx86rhd2g3m3udap87p8pft1zkaa5zjmt"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=x86rhd2g3m3udap87p8pft1zkaa5zjmt&down=async" async></script><a href="https://www.webcontadores.com"></a><noscript><img src="https://counter9.stat.ovh/private/webcontadores.php?c=x86rhd2g3m3udap87p8pft1zkaa5zjmt" border="0"></a></noscript>
+
+    <!-- Google Bots -->
+    <meta name="robots" content="index, follow">
+	  <meta name="googlebot" content="all">
+
     <style>
+
+      @font-face {
+        font-family: 'lock-pass';
+        src: url('lockpass.xyz/fonts/lockpass.woff2') format('woff2'),
+          url('lockpass.xyz/fonts/lockpass.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+      }
+
       /* Global Styles & Colors */
       :root {
-        --green: #6aaa64;
+        --green: #7ed376;
         --darkendGreen: #538d4e;
-        --yellow: #c9b458;
-        --darkendYellow: #b59f3b;
+        --yellow: #ffd931;
+        --darkendYellow: #d8bb3a;
         --lightGray: #d8d8d8;
         --gray: #86888a;
         --darkGray: #939598;
@@ -44,32 +59,56 @@
         /* Colorblind colors */
         --orange: #f5793a;
         --blue: #85c0f9;
-        font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-family: 'lock-pass';
         font-size: 16px;
         --header-height: 50px;
         --keyboard-height: 200px;
         --game-max-width: 500px;
-      }
+      } 
       /* Light theme colors */
       :root {
-        --color-tone-1: #1a1a1b;
-        --color-tone-2: #787c7e;
-        --color-tone-3: #878a8c;
-        --color-tone-4: #d3d6da;
-        --color-tone-5: #edeff1;
+        /*Cor do Switch*/--switch: #c00fc0;
+        /*Cor Letra Teclado*/--color-tone-1: #c00fc0;
+        /*Cor Incorreta*/--color-tone-2: #ebeff0;
+        /*Cor dos Botões Claro*/--color-tone-3: #c00fc0;
+        /*Cor do Teclado Claro*/--color-tone-4: #b7b8bb;
+        --color-tone-5: #edf1f0;
         --color-tone-6: #f6f7f8;
-        --color-tone-7: #ffffff;
+        /*Cor do Fundo*/--color-tone-7: #ffffff;
+        --color-tone-8: #c00fc0;
+        /*Cor do Titulo*/--color-tone-9: #c00fc0;
+        /*Cor dos Números Digitados*/--color-tone-10: #c00fc0;
+        /*Cor das Letras*/--color-tone-11: #1a1a1b;
+        /*Cor Letras Pequenas*/--color-tone-12: #791579;
+        /*Cor Instruções*/--color-tone-13: #1a1a1b;
+        /*Apagar Número*/--color-tone-14: #c00fc0;
+        /*Botões Config*/--color-tone-15: #1a1a1b;
+        /*Compartilhar*/--color-tone-16: #1a1a1b;
+        /*FootNote*/--color-tone-17: #c00fc0;
+        /*Bloco do número*/--color-tone-18: #c00fc0;
         --opacity-50: rgba(255, 255, 255, 0.5);
       }
       /* Dark Theme Colors */
       .nightmode {
-        --color-tone-1: #d7dadc;
-        --color-tone-2: #818384;
-        --color-tone-3: #565758;
-        --color-tone-4: #3a3a3c;
+        /*Cor do Switch*/--switch: #791579;
+        /*Cor Letra Teclado*/--color-tone-1: #edeff1;
+        /*Cor Incorreta*/--color-tone-2: #252546;
+        /*Cor dos Botões Escuro*/--color-tone-3: #791579;
+        /*Cor do Teclado Escuro*/--color-tone-4: #791579;
         --color-tone-5: #272729;
         --color-tone-6: #1a1a1b;
-        --color-tone-7: #121213;
+        /*Cor do Fundo*/--color-tone-7: #282847;
+        --color-tone-8: #791579;
+        /*Cor do Titulo*/--color-tone-9: #791579;
+        /*Cor dos Números Digitados*/--color-tone-10: #d7dadc;
+        /*Cor das Letras*/--color-tone-11: #ffffff;
+        /*Cor Letras Pequenas*/--color-tone-12: #791579;
+        /*Cor Instruções*/--color-tone-13: #ffffff;
+        /*Apagar Número*/--color-tone-14: #edeff1;
+        /*Botões Config*/--color-tone-15: #ffffff;
+        /*Compartilhar*/--color-tone-16: #ffffff;
+        /*FootNote*/--color-tone-17: #791579;
+        /*Bloco do número*/--color-tone-18: #ffffff;
         --opacity-50: rgba(0, 0, 0, 0.5);
       }
       /* Constant colors and colors derived from theme */
@@ -79,11 +118,12 @@
       }
       :root {
         --color-present: var(--yellow);
+        --color-switch: var(--switch);
         --color-correct: var(--green);
         --color-absent: var(--color-tone-2);
-        --tile-text-color: var(--color-tone-7);
-        --key-text-color: var(--color-tone-1);
-        --key-evaluated-text-color: var(--color-tone-7);
+        --tile-text-color: var(--color-tone-8);
+        /*Cor do Número Teclado*/--key-text-color: var(--color-tone-1);
+        /*Botão Compartilhar*/--key-evaluated-text-color: var(--color-tone-16);
         --key-bg: var(--color-tone-4);
         --key-bg-present: var(--color-present);
         --key-bg-correct: var(--color-correct);
@@ -92,12 +132,13 @@
       }
       .nightmode {
         --color-present: var(--darkendYellow);
+        --color-switch: var(--switch);
         --color-correct: var(--darkendGreen);
-        --color-absent: var(--color-tone-4);
-        --tile-text-color: var(--color-tone-1);
-        --key-text-color: var(--color-tone-1);
-        --key-evaluated-text-color: var(--color-tone-1);
-        --key-bg: var(--color-tone-2);
+        --color-absent: var(--color-tone-2);
+        --tile-text-color: var(--color-tone-8);
+        /*Cor do Número Teclado*/--key-text-color: var(--color-tone-1);
+        /*Botão Compartilhar*/--key-evaluated-text-color: var(--color-tone-16);
+        --key-bg: var(--color-tone-4);
         --key-bg-present: var(--color-present);
         --key-bg-correct: var(--color-correct);
         --key-bg-absent: var(--color-absent);
@@ -105,6 +146,7 @@
       }
       .colorblind {
         --color-correct: var(--orange);
+        --color-switch: var(--switch);
         --color-present: var(--blue);
         --tile-text-color: var(--white);
         --key-bg-present: var(--color-present);
@@ -125,7 +167,7 @@
     </style>
   </head>
   <!-- Java Script OFF message -->
-  <body><noscript>Você precisa ativar o JavaScript para abrir este site.</noscript><div id="root"></div></body>
+  <body><noscript>Você precisa ativar o JavaScript para jogar o LockPass!</noscript><div id="root"></div></body>
   
   <body>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9J40ZM4GVG"></script>
