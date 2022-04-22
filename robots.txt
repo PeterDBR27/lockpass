@@ -1,3 +1,4 @@
+Sitemap: https://lockpass.xyz/sitemap.xml
 User-agent: Googlebot
 Disallow: 
 User-agent: googlebot-image
