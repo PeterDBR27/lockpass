@@ -261,7 +261,7 @@ function random(seed) {
         }
         var k = document.createElement("template");
         k.innerHTML =
-            "\n<style>\n  :host {\n    display: inline-block;\n  }\n  .tile {\n    width: 100%;\n    display: inline-flex;\n    justify-content: center;\n    align-items: center;\n    font-size: 2rem;\n    line-height: 2rem;\n    font-weight: bold;\n    vertical-align: middle;\n    box-sizing: border-box;\n    color: var(--tile-text-color);\n    text-transform: uppercase;\n    user-select: none;\n  }\n  .tile::before {\n    content: '';\n    display: inline-block;\n    padding-bottom: 100%;\n  }\n\n  /* Allow tiles to be smaller on small screens */\n  @media (max-height: 600px) {\n    .tile {\n      font-size: 1em;\n      line-height: 1em;\n    }\n  }\n\n  .tile[data-state='empty'] {\n    border: 2px solid var(--color-tone-4);\n  }\n  .tile[data-state='tbd'] {\n    background-color: var(--color-tone-7);\n    border: 2px solid var(--color-tone-3);\n    color: var(--color-tone-1);\n  }\n  .tile[data-state='correct'] {\n    background-color: var(--color-correct);\n  }\n  .tile[data-state='present'] {\n    background-color: var(--color-present);\n  }\n  .tile[data-state='absent'] {\n    background-color: var(--color-absent);\n  }\n\n  .tile[data-animation='pop'] {\n    animation-name: PopIn;\n    animation-duration: 100ms;\n  }\n\n  @keyframes PopIn {\n    from {\n      transform: scale(0.8);\n      opacity: 0;\n    }\n\n    40% {\n      transform: scale(1.1);\n      opacity: 1;\n    }\n  }\n  .tile[data-animation='flip-in'] {\n    animation-name: FlipIn;\n    animation-duration: 250ms;\n    animation-timing-function: ease-in;\n  }\n  @keyframes FlipIn {\n    0% {\n      transform: rotateX(0);\n    }\n    100% {\n      transform: rotateX(-90deg);\n    }\n  }\n  .tile[data-animation='flip-out'] {\n    animation-name: FlipOut;\n    animation-duration: 250ms;\n    animation-timing-function: ease-in;\n  }\n  @keyframes FlipOut {\n    0% {\n      transform: rotateX(-90deg);\n    }\n    100% {\n      transform: rotateX(0);\n    }\n  }\n</style>\n<div class=\"tile\" data-state=\"empty\" data-animation=\"idle\"></div>\n";
+            "\n<style>\n  :host {\n    display: inline-block;\n  }\n  .tile {\n    width: 100%;\n    display: inline-flex;\n    justify-content: center;\n    align-items: center;\n    font-size: 2rem;\n    line-height: 2rem;\n    font-weight: bold;\n    vertical-align: middle;\n    box-sizing: border-box;\n    color: var(--tile-text-color);\n    text-transform: uppercase;\n    user-select: none;\n  }\n  .tile::before {\n    content: '';\n    display: inline-block;\n    padding-bottom: 100%;\n  }\n\n  /* Allow tiles to be smaller on small screens */\n  @media (max-height: 600px) {\n    .tile {\n      font-size: 1em;\n      line-height: 1em;\n    }\n  }\n\n  .tile[data-state='empty'] {\n    border: 2px solid var(--color-tone-4);\n  }\n  .tile[data-state='tbd'] {\n    background-color: var(--color-tone-7);\n    border: 2px solid var(--color-tone-18);\n    color: var(--color-tone-10);\n  }\n  .tile[data-state='correct'] {\n    background-color: var(--color-correct);\n  }\n  .tile[data-state='present'] {\n    background-color: var(--color-present);\n  }\n  .tile[data-state='absent'] {\n    background-color: var(--color-absent);\n  }\n\n  .tile[data-animation='pop'] {\n    animation-name: PopIn;\n    animation-duration: 100ms;\n  }\n\n  @keyframes PopIn {\n    from {\n      transform: scale(0.8);\n      opacity: 0;\n    }\n\n    40% {\n      transform: scale(1.1);\n      opacity: 1;\n    }\n  }\n  .tile[data-animation='flip-in'] {\n    animation-name: FlipIn;\n    animation-duration: 250ms;\n    animation-timing-function: ease-in;\n  }\n  @keyframes FlipIn {\n    0% {\n      transform: rotateX(0);\n    }\n    100% {\n      transform: rotateX(-90deg);\n    }\n  }\n  .tile[data-animation='flip-out'] {\n    animation-name: FlipOut;\n    animation-duration: 250ms;\n    animation-timing-function: ease-in;\n  }\n  @keyframes FlipOut {\n    0% {\n      transform: rotateX(-90deg);\n    }\n    100% {\n      transform: rotateX(0);\n    }\n  }\n</style>\n<div class=\"tile\" data-state=\"empty\" data-animation=\"idle\"></div>\n";
         var v = (function (e) {
             r(t, e);
             var a = h(t);
@@ -1362,7 +1362,7 @@ function random(seed) {
             }
           
             a, a:visited {
-              color: var(--color-tone-2);
+              color: var(--color-tone-15);
             }
           
             .title {
@@ -1373,7 +1373,7 @@ function random(seed) {
             }
             .description {
               font-size: 12px;
-              color: var(--color-tone-2);
+              color: var(--color-tone-12);
             }
           
             #footnote {
@@ -1382,7 +1382,7 @@ function random(seed) {
               left: 0;
               right: 0;
               padding: 16px;
-              color: var(--color-tone-2);
+              color: var(--color-tone-17);
               font-size: 12px;
               text-align: right;
               display: flex;
@@ -1402,7 +1402,7 @@ function random(seed) {
                 <div class="setting">
                   <div class="text">
                     <div class="title">Modo Difícil</div>
-                    <div class="description">Dicas são forçadas</div>
+                    <div class="description">Qualquer pista revelada terá de ser usada nas tentativas seguintes</div>
                   </div>
                   <div class="control">
                     <game-switch id="hard-mode" name="hard-mode"></game-switch>
@@ -1411,6 +1411,7 @@ function random(seed) {
                 <div class="setting">
                   <div class="text">
                     <div class="title">Tema Escuro</div>
+                    <div class="description">Alterne entre o modo claro e escuro</div>
                   </div>
                   <div class="control">
                     <game-switch id="dark-theme" name="dark-theme"></game-switch>
@@ -1425,7 +1426,24 @@ function random(seed) {
                     <game-switch id="color-blind-theme" name="color-blind-theme"></game-switch>
                   </div>
                 </div>
+                <div class="setting">
+                  <div class="text">
+                    <div class="title">Comunidade</div>
+                  </div>
+                  <div class="control">\n          
+                  <a href="https://twitter.com/LockPassXYZ" target="blank" title="@LockPassXYZ">Twitter</a>
+                  </div>      
+                </div>
+                <div class="setting">
+                  <div class="text">
+                    <div class="title">FeedBack</div>
+                  </div>
+                  <div class="control">\n          
+                  <a href="mailto:suport@lockpass.xyz?subject=FeedBack%20LockPass&body=Conte-nos%20sua%20experi%C3%AAncia%20jogando%20LockPass%0D%0AEscreva%20aqui%3A" title="suporte@lockpass.xyz">Email</a>
+                  </div>      
+                </div>
               </section>
+            </div>
             </div>
             <div id="footnote">
               <div id="copyright">Autor: <a href="https://www.instagram.com/_xd_pedro" target="blank" title="@_xd_pedro">Pedro Henrique</a></strong></div>
@@ -1534,7 +1552,7 @@ function random(seed) {
               .toast {
                 position: relative;
                 margin: 16px;
-                background-color: var(--color-tone-1);
+                background-color: var(--color-tone-8);
                 color: var(--color-tone-7);
                 padding: 16px;
                 border: none;
@@ -1637,7 +1655,7 @@ function random(seed) {
             );
         }
         function Pa(e) {
-            var a = ["th", "st", "nd", "rd"],
+            var a = ["º", "º", "º", "º"],
                 s = e % 100;
             return e + (a[(s - 20) % 10] || a[s] || a[0]);
         }
@@ -1715,7 +1733,7 @@ function random(seed) {
                 .concat(1e3, ";\n  }\n  #system-toaster {\n    z-index: ")
                 .concat(
                     4e3,
-                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-1);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(6, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="help">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n LOCKPASS\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="statistics">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="settings">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
+                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-9);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(6, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="help">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n LOCKPASS\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="statistics">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="settings">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
                 );
         var Qa = document.createElement("template");
         Qa.innerHTML =
@@ -1890,7 +1908,7 @@ function random(seed) {
                                                 a.setAttribute("invalid", ""),
                                                 void this.addToast(
                                                     n ||
-                                                        "Not valid in hard mode"
+                                                        "Não é válido no modo difícil"
                                                 )
                                             );
                                     }
@@ -2030,7 +2048,7 @@ function random(seed) {
                                                     ""
                                                 ),
                                             void this.addToast(
-                                                "Not enough digits"
+                                                "Apenas números com 5 digitos"
                                             )
                                         );
                                     this.evaluateRow();
@@ -2350,7 +2368,7 @@ function random(seed) {
         os.innerHTML =
             "\n  <style>\n    .overlay {\n      display: none;\n      position: absolute;\n      width: 100%;\n      height: 100%;\n      top: 0;\n      left: 0;\n      justify-content: center;\n      align-items: center;\n      background-color: var(--opacity-50);\n      z-index: ".concat(
                 3e3,
-                ';\n    }\n\n    :host([open]) .overlay {\n      display: flex;\n    }\n\n    .content {\n      position: relative;\n      border-radius: 8px;\n      border: 1px solid var(--color-tone-6);\n      background-color: var(--modal-content-bg);\n      color: var(--color-tone-1);\n      box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.2);\n      width: 90%;\n      max-height: 90%;\n      overflow-y: auto;\n      animation: SlideIn 200ms;\n      max-width: var(--game-max-width);\n      padding: 16px;\n      box-sizing: border-box;\n    }\n\n    .content.closing {\n      animation: SlideOut 200ms;\n    }\n\n    .close-icon {\n      width: 24px;\n      height: 24px;\n      position: absolute;\n      top: 16px;\n      right: 16px;\n    }\n\n    game-icon {\n      position: fixed;\n      user-select: none;\n      cursor: pointer;\n    }\n\n    @keyframes SlideIn {\n      0% {\n        transform: translateY(30px);\n        opacity: 0;\n      }\n      100% {\n        transform: translateY(0px);\n        opacity: 1;\n      }\n    }\n    @keyframes SlideOut {\n      0% {\n        transform: translateY(0px);\n        opacity: 1;\n      }\n      90% {\n        opacity: 0;\n      }\n      100% {\n        opacity: 0;\n        transform: translateY(60px);\n      }\n    }\n  </style>\n  <div class="overlay">\n    <div class="content">\n      <slot></slot>\n      <div class="close-icon">\n        <game-icon icon="close"></game-icon>\n      </div>\n    </div>\n  </div>\n'
+                ';\n    }\n\n    :host([open]) .overlay {\n      display: flex;\n    }\n\n    .content {\n      position: relative;\n      border-radius: 8px;\n      border: 1px solid var(--color-tone-6);\n      background-color: var(--modal-content-bg);\n      color: var(--color-tone-11);\n      box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.2);\n      width: 90%;\n      max-height: 90%;\n      overflow-y: auto;\n      animation: SlideIn 200ms;\n      max-width: var(--game-max-width);\n      padding: 16px;\n      box-sizing: border-box;\n    }\n\n    .content.closing {\n      animation: SlideOut 200ms;\n    }\n\n    .close-icon {\n      width: 24px;\n      height: 24px;\n      position: absolute;\n      top: 16px;\n      right: 16px;\n    }\n\n    game-icon {\n      position: fixed;\n      user-select: none;\n      cursor: pointer;\n    }\n\n    @keyframes SlideIn {\n      0% {\n        transform: translateY(30px);\n        opacity: 0;\n      }\n      100% {\n        transform: translateY(0px);\n        opacity: 1;\n      }\n    }\n    @keyframes SlideOut {\n      0% {\n        transform: translateY(0px);\n        opacity: 1;\n      }\n      90% {\n        opacity: 0;\n      }\n      100% {\n        opacity: 0;\n        transform: translateY(60px);\n      }\n    }\n  </style>\n  <div class="overlay">\n    <div class="content">\n      <slot></slot>\n      <div class="close-icon">\n        <game-icon icon="close"></game-icon>\n      </div>\n    </div>\n  </div>\n'
             );
         var ns = (function (e) {
             r(t, e);
@@ -2971,7 +2989,7 @@ function random(seed) {
               }
           
               .countdown {
-                border-right: 1px solid var(--color-tone-1);
+                border-right: 1px solid var(--color-tone-11);
                 padding-right: 12px;
                 width: 50%;
               }
@@ -3364,7 +3382,7 @@ function random(seed) {
                 transition: transform 0.3s;
               }
               :host([checked]) .switch {
-                background: var(--color-correct);
+                background: var(--color-switch);
               }
               :host([checked]) .knob {
                 transform: translateX(calc(100% - 4px));
@@ -3459,7 +3477,7 @@ function random(seed) {
         Ps.innerHTML = `<style>
             .instructions {
               font-size: 14px;
-              color: var(--color-tone-1)
+              color: var(--color-tone-13)
             }
           
             .examples {
@@ -3487,10 +3505,10 @@ function random(seed) {
               <div class="instructions">
                 <p>Descubra o <strong>CÓDIGO</strong> em 6 tentativas.</p>
                 <p>Cada tentativa deve ser um número de 5 dígitos. Aperte o botão <strong>ENVIAR</strong> para enviar.</p>
-                <p>Após enviar, os números mudarão para indicar o quão perto você está da resposta.</p>
+                <p>Após enviar, os números mudarão de cor para indicar o quão perto você está da resposta.</p>
                 <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
                 <div class="examples">
-                <p>Se um número ficar <strong>VERDE</strong>, ele está presenta no código e na posição correta.</p>
+                <p><strong>Exemplos:</strong></p>
                   <div class="example">
                     <div class="row">
                       <game-tile letter="3" evaluation="correct" reveal></game-tile>
@@ -3499,7 +3517,7 @@ function random(seed) {
                       <game-tile letter="2"></game-tile>
                       <game-tile letter="0"></game-tile>
                     </div>
-                    <p>Se um número ficar <strong>AMARELO</strong>, ele está presente no código, mas na posição errada.</p>
+                    <p>O número 3 está no código e na posição <strong>CORRETA</strong>.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3509,7 +3527,7 @@ function random(seed) {
                       <game-tile letter="3"></game-tile>
                       <game-tile letter="7"></game-tile>
                     </div>
-                    <p>Se um número ficar <strong>CINZA</strong>, ele <strong>NÃO</strong> está no código.</p>
+                    <p>O número 1 está no código mas na posição <strong>ERRADA</strong>.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3519,9 +3537,11 @@ function random(seed) {
                       <game-tile letter="7" evaluation="absent" reveal></game-tile>
                       <game-tile letter="2"></game-tile>
                     </div>
+                    <p>O número 7 <strong>NÃO</strong> está no código.</p>
+                    </div>
                   </div>
                 </div>
-                <p><strong>Um novo <strong>CÓDIGO</strong> estará disponível todos os dias!<strong></p>
+                <p><strong>Um novo <strong>CÓDIGO</strong> estará disponível <strong>TODOS OS DIAS!</strong><strong></p>
               </div>
             </section>`;
         var Hs = (function (e) {
@@ -3571,7 +3591,7 @@ function random(seed) {
           
               .content {
                 position: relative;
-                color: var(--color-tone-1);
+                color: var(--color-tone-11);
                 padding: 0 32px;
                 max-width: var(--game-max-width);
                 width: 100%;
@@ -3749,7 +3769,7 @@ function random(seed) {
                                             .querySelector("path")
                                             .setAttribute(
                                                 "fill",
-                                                "var(--color-tone-1)"
+                                                "var(--color-tone-14)"
                                             ),
                                     "share" === e &&
                                         this.shadowRoot
