@@ -1446,7 +1446,7 @@ function random(seed) {
             </div>
             </div>
             <div id="footnote">
-              <div id="copyright">Autor: <a href="https://www.instagram.com/_xd_pedro" target="blank" title="@_xd_pedro">Pedro Henrique</a></strong></div>
+              <div id="copyright">Autor: <a href="https://www.pedros.cf" target="blank" title="@_xd_pedro">Pedro Henrique</a></strong></div>
               <div id="copyrightr">Logo por: <a href="https://www.instagram.com/llele.kkkj" target="blank" title="@llele.kkkj">Eleonora</a></strong></div>
               <div>
                 <div id="puzzle-number"></div>
