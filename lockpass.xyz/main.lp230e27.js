@@ -1439,7 +1439,7 @@ function random(seed) {
                     <div class="title">FeedBack</div>
                   </div>
                   <div class="control">\n          
-                  <a href="mailto:suport@lockpass.xyz?subject=FeedBack%20LockPass&body=Conte-nos%20sua%20experi%C3%AAncia%20jogando%20LockPass%0D%0AEscreva%20aqui%3A" title="suporte@lockpass.xyz">Email</a>
+                  <a href="mailto:suporte@lockpass.xyz?subject=FeedBack%20LockPass&body=Conte-nos%20sua%20experi%C3%AAncia%20jogando%20LockPass%0D%0AEscreva%20aqui%3A" title="suporte@lockpass.xyz">Email</a>
                   </div>      
                 </div>
               </section>
