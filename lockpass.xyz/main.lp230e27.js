@@ -2271,12 +2271,12 @@ function random(seed) {
                                                             "game-page"
                                                         ),
                                                     t =
-                                                        document.createTextNode(
+                                                       e.showHelpModal(
                                                             "Como jogar"
                                                         );
                                                 s.appendChild(t);
                                                 var o =
-                                                    document.createElement(
+                                                e.showHelpModal(
                                                         "game-help"
                                                     );
                                                 o.setAttribute("page", ""),
@@ -2569,20 +2569,6 @@ function random(seed) {
                     t
                 );
             })(c(HTMLElement));
-        /*! *****************************************************************************
-  Copyright (c) Microsoft Corporation.
-
-  Permission to use, copy, modify, and/or distribute this software for any
-  purpose with or without fee is hereby granted.
-
-  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-  REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-  AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-  LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-  PERFORMANCE OF THIS SOFTWARE.
-  ***************************************************************************** */
         function cs(e, a, s, t) {
             return new (s || (s = Promise))(function (o, n) {
                 function r(e) {
@@ -3475,39 +3461,50 @@ function random(seed) {
         customElements.define("game-switch", $s);
         var Ps = document.createElement("template");
         Ps.innerHTML = `<style>
-            .instructions {
-              font-size: 14px;
-              color: var(--color-tone-13)
-            }
+        .instructions {
+          font-size: 14px;
+          color: var(--color-tone-13)
+        }
+      
+        .examples {
+          border-bottom: 1px solid var(--color-tone-4);
+          border-top: 1px solid var(--color-tone-4);
+        }
+      
+        .example {
+          margin-top: 24px;
+          margin-bottom: 24px;
+        }
+      
+        game-tile {
+          width: 40px;
+          height: 40px;
+        }
+        
+        h1 {
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+          }
+      
+        :host([page]) section {
+          padding: 16px;
+          padding-top: 0px;
+        }
+      
+        </style>
           
-            .examples {
-              border-bottom: 1px solid var(--color-tone-4);
-              border-top: 1px solid var(--color-tone-4);
-            }
-          
-            .example {
-              margin-top: 24px;
-              margin-bottom: 24px;
-            }
-          
-            game-tile {
-              width: 40px;
-              height: 40px;
-            }
-          
-            :host([page]) section {
-              padding: 16px;
-              padding-top: 0px;
-            }
-          
-            </style>
-            <section>
-              <div class="instructions">
-                <p>Descubra o <strong>CÓDIGO</strong> em 6 tentativas.</p>
-                <p>Cada tentativa deve ser um número de 5 dígitos. Aperte o botão <strong>ENVIAR</strong> para enviar.</p>
-                <p>Após enviar, os números mudarão de cor para indicar o quão perto você está da resposta.</p>
-                <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
-                <div class="examples">
+            <div class="container">
+              <h1>COMO JOGAR</h1>
+              <div id="instructions"></div>
+              <p>Descubra o <strong>CÓDIGO</strong> em 6 tentativas.</p>
+              <p>Cada tentativa deve ser um número de <strong>5</strong> dígitos. Aperte o botão <strong>ENVIAR</strong> para enviar.</p>
+              <p>Após enviar, os números mudarão de cor para indicar o quão perto você está da resposta.</p>
+              <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
+              <div class="examples">
                 <p><strong>Exemplos:</strong></p>
                   <div class="example">
                     <div class="row">
@@ -3517,7 +3514,7 @@ function random(seed) {
                       <game-tile letter="2"></game-tile>
                       <game-tile letter="0"></game-tile>
                     </div>
-                    <p>O número 3 está no código e na posição <strong>CORRETA</strong>.</p>
+                    <p>O número <game-tile letter="3" evaluation="correct" reveal></game-tile> está no código e na posição <strong>CORRETA</strong>.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3527,7 +3524,7 @@ function random(seed) {
                       <game-tile letter="3"></game-tile>
                       <game-tile letter="7"></game-tile>
                     </div>
-                    <p>O número 1 está no código mas na posição <strong>ERRADA</strong>.</p>
+                    <p>O número <game-tile letter="1" evaluation="present" reveal></game-tile> está no código mas na posição <strong>ERRADA</strong>.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3537,13 +3534,13 @@ function random(seed) {
                       <game-tile letter="7" evaluation="absent" reveal></game-tile>
                       <game-tile letter="2"></game-tile>
                     </div>
-                    <p>O número 7 <strong>NÃO</strong> está no código.</p>
+                    <p>O número <game-tile letter="7" evaluation="absent" reveal></game-tile> <strong>NÃO</strong> está no código.</p>
                     </div>
                   </div>
                 </div>
-                <p><strong>Um novo <strong>CÓDIGO</strong> estará disponível <strong>TODOS OS DIAS!</strong><strong></p>
+                <p><strong>Um novo <strong>CÓDIGO</strong> está disponível <strong>TODOS OS DIAS!</strong><strong></p>
               </div>
-            </section>`;
+            </div>`;
         var Hs = (function (e) {
             r(t, e);
             var a = h(t);
@@ -3738,8 +3735,7 @@ function random(seed) {
                     "M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z",
                 close: "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z",
                 share: "M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z",
-                statistics:
-                    "M16,11V3H8v6H2v12h20V11H16z M10,5h4v14h-4V5z M4,11h4v8H4V11z M20,19h-4v-6h4V19z",
+                statistics: "M16,11V3H8v6H2v12h20V11H16z M10,5h4v14h-4V5z M4,11h4v8H4V11z M20,19h-4v-6h4V19z",
             },
             Fs = (function (e) {
                 r(t, e);
