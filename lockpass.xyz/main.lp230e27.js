@@ -3517,7 +3517,7 @@ function random(seed) {
                       <game-tile letter="2"></game-tile>
                       <game-tile letter="0"></game-tile>
                     </div>
-                    <p>O número 3 está no código e na posição <strong>CORRETA</strong>.</p>
+                    <p>O número <game-tile letter="3" evaluation="correct" reveal></game-tile> está no código e na posição <strong>CORRETA</strong>.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3527,7 +3527,7 @@ function random(seed) {
                       <game-tile letter="3"></game-tile>
                       <game-tile letter="7"></game-tile>
                     </div>
-                    <p>O número 1 está no código mas na posição <strong>ERRADA</strong>.</p>
+                    <p>O número <game-tile letter="1" evaluation="present" reveal></game-tile> está no código mas na posição <strong>ERRADA</strong>.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3537,7 +3537,7 @@ function random(seed) {
                       <game-tile letter="7" evaluation="absent" reveal></game-tile>
                       <game-tile letter="2"></game-tile>
                     </div>
-                    <p>O número 7 <strong>NÃO</strong> está no código.</p>
+                    <p>O número <game-tile letter="7" evaluation="absent" reveal></game-tile> <strong>NÃO</strong> está no código.</p>
                     </div>
                   </div>
                 </div>
