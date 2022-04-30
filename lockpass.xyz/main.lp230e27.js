@@ -2271,12 +2271,12 @@ function random(seed) {
                                                             "game-page"
                                                         ),
                                                     t =
-                                                       e.showHelpModal(
+                                                    document.createTextNode(
                                                             "Como jogar"
                                                         );
                                                 s.appendChild(t);
                                                 var o =
-                                                e.showHelpModal(
+                                                document.createElement(
                                                         "game-help"
                                                     );
                                                 o.setAttribute("page", ""),
@@ -3462,46 +3462,35 @@ function random(seed) {
         var Ps = document.createElement("template");
         Ps.innerHTML = `<style>
         .instructions {
-          font-size: 14px;
-          color: var(--color-tone-13)
-        }
-      
-        .examples {
-          border-bottom: 1px solid var(--color-tone-4);
-          border-top: 1px solid var(--color-tone-4);
-        }
-      
-        .example {
-          margin-top: 24px;
-          margin-bottom: 24px;
-        }
-      
-        game-tile {
-          width: 40px;
-          height: 40px;
-        }
-        
-        h1 {
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            text-align: center;
-            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--color-tone-13)
           }
-      
-        :host([page]) section {
-          padding: 16px;
-          padding-top: 0px;
-        }
-      
-        </style>
-          
-            <div class="container">
-              <h1>COMO JOGAR</h1>
-              <div id="instructions"></div>
+        
+          .examples {
+            border-bottom: 1px solid var(--color-tone-4);
+            border-top: 1px solid var(--color-tone-4);
+          }
+        
+          .example {
+            margin-top: 24px;
+            margin-bottom: 24px;
+          }
+        
+          game-tile {
+            width: 40px;
+            height: 40px;
+          }
+        
+          :host([page]) section {
+            padding: 16px;
+            padding-top: 0px;
+          }
+        
+          </style>
+          <section>
+            <div class="instructions">
               <p>Descubra o <strong>CÓDIGO</strong> em 6 tentativas.</p>
-              <p>Cada tentativa deve ser um número de <strong>5</strong> dígitos. Aperte o botão <strong>ENVIAR</strong> para enviar.</p>
+              <p>Cada tentativa deve ser um número de 5 dígitos. Aperte o botão <strong>ENVIAR</strong> para enviar.</p>
               <p>Após enviar, os números mudarão de cor para indicar o quão perto você está da resposta.</p>
               <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
               <div class="examples">
