@@ -1426,14 +1426,7 @@ function random(seed) {
                     <game-switch id="color-blind-theme" name="color-blind-theme"></game-switch>
                   </div>
                 </div>
-                <div class="setting">
-                  <div class="text">
-                    <div class="title">Comunidade</div>
-                  </div>
-                  <div class="control">\n          
-                  <a href="https://twitter.com/LockPassXYZ" target="blank" title="@LockPassXYZ">Twitter</a>
-                  </div>      
-                </div>
+                <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" title="@powerlanguish">Wordle</a></strong>.</p>
                 <div class="setting">
                   <div class="text">
                     <div class="title">FeedBack</div>
@@ -1442,12 +1435,15 @@ function random(seed) {
                   <a href="mailto:suporte@lockpass.xyz?subject=FeedBack%20LockPass&body=Conte-nos%20sua%20experi%C3%AAncia%20jogando%20LockPass%0D%0AEscreva%20aqui%3A" title="suporte@lockpass.xyz">Email</a>
                   </div>      
                 </div>
+                <div class="text">
+                  <p>LockPass é baseado no <strong><a href="https://www.powerlanguage.co.uk/wordle" title="@powerlanguish">Wordle</a></strong>.</p>
+                  </div>
               </section>
             </div>
             </div>
             <div id="footnote">
-              <div id="copyright">Autor: <a href="https://www.pedros.cf" target="blank" title="@_xd_pedro">Pedro Henrique</a></strong></div>
-              <div id="copyrightr">Logo por: <a href="https://www.instagram.com/llele.kkkj" target="blank" title="@llele.kkkj">Eleonora</a></strong></div>
+              <div id="copyright">Autor: <a href="https://www.pedros.cf" title="@_xd_pedro">Pedro Henrique</a></strong></div>
+              <div id="copyrightr">Logo por: <a href="https://www.instagram.com/llele.kkkj" title="@llele.kkkj">Eleonora</a></strong></div>
               <div>
                 <div id="puzzle-number"></div>
                 <div id="hash"></div>
@@ -3492,7 +3488,6 @@ function random(seed) {
               <p>Descubra o <strong>CÓDIGO</strong> em 6 tentativas.</p>
               <p>Cada tentativa deve ser um número de 5 dígitos. Aperte o botão <strong>ENVIAR</strong> para enviar.</p>
               <p>Após enviar, os números mudarão de cor para indicar o quão perto você está da resposta.</p>
-              <p>Esta é uma adaptação de Josh Wardle <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
               <div class="examples">
                 <p><strong>Exemplos:</strong></p>
                   <div class="example">
