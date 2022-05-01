@@ -3041,7 +3041,7 @@ function random(seed) {
             </div>`;
         var Is = document.createElement("template");
         Is.innerHTML = `<div class="countdown">
-              <h1>Póximo CÓDIGO em:</h1>
+              <h1>Próximo CÓDIGO em:</h1>
               <div id="timer">
                 <div class="statistic-container">
                   <div class="statistic timer">
